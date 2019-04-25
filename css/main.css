@@ -102,11 +102,65 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+/* 
 
+TABLE OF CONTENTS
+I. GLOBAL STYLES
+IA. LAYOUT
 
+MEDIA QUERIES
+GLOBAL STYLES
 
+*/
 
+/* ===== I. GLOBAL STYLES ===== */
 
+/* === IA. LAYOUT === */
+
+* {
+    border: 1px solid black;
+    box-sizing: border-box;
+}
+
+section {
+    border: 2px solid red;
+}
+
+header,
+.flex-col-row,
+footer {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+}
+
+.full,
+.full-2col,
+.service,
+aside,
+form {
+    display: flex;
+    flex-flow: column nowrap;
+    width: 100%;
+}
+
+#social-media {
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.social-icons {
+    width: 30%;
+}
+
+figure {
+    margin: 0;
+}
+
+img {
+    width: 100%;
+}
 
 
 
@@ -204,8 +258,26 @@ textarea {
    Modify as content requires.
    ========================================================================== */
 
-   @media only screen and (min-width: 35em) {
-    /* Style adjustments for viewports that meet the condition */
+@media only screen and (min-width: 768px) {
+
+    header,
+    .flex-col-row,
+    footer {
+        flex-flow: row wrap;
+        justify-content: space-evenly;
+    }
+
+    .full-2col,
+    .service {
+        max-width: 40%;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+
+    .service {
+        max-width: 30%;
+    }
 }
 
 @media print,
