@@ -117,6 +117,7 @@ GLOBAL STYLES
 
 /* === IA. LAYOUT === */
 
+/* Test Code */
 * {
     border: 1px solid black;
     box-sizing: border-box;
@@ -126,6 +127,8 @@ section {
     border: 2px solid red;
 }
 
+
+/* = IA1. PARENT CONTAINERS = */
 header,
 .flex-col-row,
 footer {
@@ -134,6 +137,7 @@ footer {
     justify-content: center;
 }
 
+/* = IA2. CHILD ELEMENTS = */
 .full,
 .full-2col,
 .service,
@@ -144,6 +148,8 @@ form {
     width: 100%;
 }
 
+/* = IA3. FOOTER LAYOUT = */
+
 #social-media {
     flex-flow: row wrap;
     justify-content: space-evenly;
@@ -153,6 +159,8 @@ form {
 .social-icons {
     width: 30%;
 }
+
+/* === IB. MISC ELEMENTS === */
 
 figure {
     margin: 0;
