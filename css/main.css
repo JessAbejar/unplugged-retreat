@@ -106,7 +106,13 @@ textarea {
 
 TABLE OF CONTENTS
 I. GLOBAL STYLES
-IA. LAYOUT
+IA.
+IB. LAYOUT
+IB1. PARENT CONTAINERS
+IB2. CHILD ELEMENTS
+IB3. FOOTER LAYOUT
+IC. TEXT STYLES
+ID. MISC ELEMENTS
 
 MEDIA QUERIES
 GLOBAL STYLES
@@ -115,11 +121,22 @@ GLOBAL STYLES
 
 /* ===== I. GLOBAL STYLES ===== */
 
-/* === IA. LAYOUT === */
+/* === IA. BASE STYLES === */
+
+body {
+    background-color: #202322;
+    color: #e2e3ed;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    text-align: left;
+}
+
+/* === IB. LAYOUT === */
 
 /* Test Code */
 * {
-    border: 1px solid black;
+    border: 1px solid white;
     box-sizing: border-box;
 }
 
@@ -128,7 +145,8 @@ section {
 }
 
 
-/* = IA1. PARENT CONTAINERS = */
+/* = IB1. PARENT CONTAINERS = */
+
 header,
 .flex-col-row,
 footer {
@@ -138,7 +156,8 @@ footer {
     width: 100%;
 }
 
-/* = IA2. CHILD ELEMENTS = */
+/* = IB2. CHILD ELEMENTS = */
+
 .full,
 .full-2col,
 .service,
@@ -149,7 +168,16 @@ form {
     flex-basis: 100%;
 }
 
-/* = IA3. FOOTER LAYOUT = */
+/* = IB3. HEADER LAYOUT = */
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+/* = IB4. FOOTER LAYOUT = */
 
 #social-media {
     flex-flow: row wrap;
@@ -161,7 +189,97 @@ form {
     flex-basis: 30%;
 }
 
-/* === IB. MISC ELEMENTS === */
+/* === IC. TEXT STYLES === */
+
+/* = IC1. BASE FONTS = */
+
+.heading-lg {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.25rem;
+}
+
+.heading-md {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.875rem;
+}
+
+.heading-sm {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.125rem;
+}
+
+p {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+}
+
+a,
+a:active,
+a:hover,
+a:visited {
+    text-decoration: none;
+    color: #e2e3ed
+}
+
+/* = IC2. HEADER FONTS = */
+
+nav li {
+    padding: 0 1rem;
+}
+
+nav li a {
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 1.125rem;
+}
+
+/* = IC3. PAGE FONTS = */
+
+/* IC3a. HOMEPAGE */
+
+.service {
+    text-align: center;
+}
+
+/* IC3b. ABOUT */
+
+#contact address {
+    font-size: 0.875rem;
+    font-style: normal;
+}
+
+/* IC3c. FAQ */
+
+dt {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.125rem;
+    line-height: 1.5rem;
+    padding: 1rem 0;
+}
+
+dd {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+    margin: 0;
+    padding-bottom: 2rem;
+}
+
+/* = IC4. FOOTER FONTS = */
+
+.footer-heading {
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    font-size: 1.125rem;
+}
+
+.footer-text {
+    text-align: center;
+    font-size: 0.875rem;
+    font-style: normal;
+}
+
+/* === ID. MISC ELEMENTS === */
 
 figure {
     margin: 0;
@@ -269,6 +387,14 @@ img {
 
 @media only screen and (min-width: 768px) {
 
+    /* === TABLET : BASE STYLES === */
+
+    body {
+        font-size: 16px;
+    }
+
+    /* === TABLET : LAYOUT === */
+
     header,
     .flex-col-row,
     footer {
@@ -280,12 +406,103 @@ img {
     .service {
         flex-basis: 40%;
     }
+
+    nav ul {
+        justify-content: flex-end;
+    }
+
+    /* === TABLET : TEXT STYLES === */
+
+    nav li a {
+        font-size: 1rem;
+    }
+
+    .heading-lg {
+        font-size: 3rem;
+    }
+
+    .heading-md {
+        font-size: 2.25rem;
+    }
+
+    .heading-sm {
+        font-size: 1.5rem;
+    }
+
+    #contact address {
+        line-height: 1.125rem;
+    }
+
+    dt {
+        font-size: 0.875rem;
+        line-height: 1.125rem;
+    }
+
+    .footer-heading {
+        font-size: 1.5rem;
+    }
+    
+    .footer-text {
+        line-height: 1.5rem
+    }
+
 }
 
 @media only screen and (min-width: 1200px) {
 
+    /* === DESKTOP : BASE STYLES === */
+
+    body {
+        font-size: 18px;
+    }
+
+    /* === DESKTOP : LAYOUT === */
+
     .service {
         flex-basis: 30%;
+    }
+
+
+    /* === DESKTOP : TEXT STYLES === */
+
+    .heading-lg {
+        font-size: 3.333rem;
+    }
+
+    .heading-md {
+        font-size: 2rem;
+    }
+
+    .heading-sm {
+        font-size: 1.667rem;
+    }
+
+    p {
+        font-size: 1rem;
+        line-height: 1.333rem;
+    }
+
+    #contact address {
+        font-size: 1rem;
+    }
+
+    dt {
+        font-size: 1rem;
+        line-height: 1rem;
+    }
+    
+    dd {
+        font-size: 1rem;
+        line-height: 1rem;
+    }
+
+    .footer-heading {
+        font-size: 1.667rem;
+    }
+    
+    .footer-text {
+        font-size: 1rem;
+        line-height: 1.333rem;
     }
 }
 
