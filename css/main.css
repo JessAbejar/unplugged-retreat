@@ -106,11 +106,12 @@ textarea {
 
 TABLE OF CONTENTS
 I. GLOBAL STYLES
-IA.
+IA. BASE STYLES
 IB. LAYOUT
-IB1. PARENT CONTAINERS
-IB2. CHILD ELEMENTS
-IB3. FOOTER LAYOUT
+IB1. CONTENT MARGINS
+IB2. PARENT CONTAINERS
+IB3. CHILD ELEMENTS
+IB4. FOOTER LAYOUT
 IC. TEXT STYLES
 ID. MISC ELEMENTS
 
@@ -122,7 +123,9 @@ GLOBAL STYLES
 /* ===== I. GLOBAL STYLES ===== */
 
 /* === IA. BASE STYLES === */
-
+* {
+    box-sizing: border-box;
+}
 body {
     background-color: #202322;
     color: #e2e3ed;
@@ -134,18 +137,16 @@ body {
 
 /* === IB. LAYOUT === */
 
-/* Test Code */
-* {
-    border: 1px solid white;
-    box-sizing: border-box;
+/* = IB2. PARENT CONTAINERS = */
+
+header,
+main,
+footer {
+    max-width: 768px;
+    padding: 0 5%;
 }
 
-section {
-    border: 2px solid red;
-}
-
-
-/* = IB1. PARENT CONTAINERS = */
+/* = IB2. PARENT CONTAINERS = */
 
 header,
 .flex-col-row,
@@ -156,7 +157,7 @@ footer {
     width: 100%;
 }
 
-/* = IB2. CHILD ELEMENTS = */
+/* = IB3. CHILD ELEMENTS = */
 
 .full,
 .full-2col,
@@ -168,7 +169,7 @@ form {
     flex-basis: 100%;
 }
 
-/* = IB3. HEADER LAYOUT = */
+/* = IB4. HEADER LAYOUT = */
 
 nav ul {
     list-style: none;
@@ -185,10 +186,6 @@ nav ul {
     width: 100%;
 }
 
-.social-icons {
-    flex-basis: 30%;
-}
-
 /* === IC. TEXT STYLES === */
 
 /* = IC1. BASE FONTS = */
@@ -196,21 +193,25 @@ nav ul {
 .heading-lg {
     font-family: 'Poppins', sans-serif;
     font-size: 2.25rem;
+    margin: 1rem 0;
 }
 
 .heading-md {
     font-family: 'Poppins', sans-serif;
     font-size: 1.875rem;
+    margin: 1rem 0;
 }
 
 .heading-sm {
     font-family: 'Poppins', sans-serif;
     font-size: 1.125rem;
+    margin: 1rem 0;
 }
 
 p {
     font-size: 0.875rem;
     line-height: 1.125rem;
+    margin: 1rem 0;
 }
 
 a,
@@ -232,6 +233,7 @@ nav li a {
     text-transform: uppercase;
     text-align: center;
     font-size: 1.125rem;
+    margin: 1rem 0;
 }
 
 /* = IC3. PAGE FONTS = */
@@ -247,6 +249,7 @@ nav li a {
 #contact address {
     font-size: 0.875rem;
     font-style: normal;
+    margin: 1rem 0;
 }
 
 /* IC3c. FAQ */
@@ -255,7 +258,7 @@ dt {
     font-family: 'Poppins', sans-serif;
     font-size: 1.125rem;
     line-height: 1.5rem;
-    padding: 1rem 0;
+    margin: 1rem 0;
 }
 
 dd {
@@ -271,12 +274,14 @@ dd {
     font-family: 'Poppins', sans-serif;
     text-align: center;
     font-size: 1.125rem;
+    margin: 1rem 0;
 }
 
 .footer-text {
     text-align: center;
     font-size: 0.875rem;
     font-style: normal;
+    margin: 1rem 0;
 }
 
 /* === ID. MISC ELEMENTS === */
@@ -289,6 +294,64 @@ img {
     width: 100%;
 }
 
+/* ===== II. COMPONENT STYLES ===== */
+
+/* === IA. HEADER === */
+
+/* === IB. PAGES === */
+
+/* = IB1. HOME = */
+
+/* IB1a. HERO IMAGE */
+
+/* IB1b. CALL-TO-ACTION */
+
+/* IB1c. SERVICES */
+
+.service {
+    padding: 10%;
+}
+
+.service i {
+    text-align: center;
+    font-size: 3.75rem;
+}
+
+/* IB1d. PREVIOUS RETREATS */
+
+/* = IB2. ABOUT = */
+
+/* IB2a. MISSION */
+
+/* IB2b. MAP */
+
+/* IB2c. CONTACT*/
+
+/* = IB3. FAQ = */
+
+/* IB3a. FAQ */
+
+/* === IC. FOOTER === */
+
+.social-icons {
+    width: 3rem;
+    height: 3rem;
+    background-color: #527158;
+    border: 1px solid transparent;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-icons i {
+    text-align: center;
+    font-size: 1.125rem;
+}
+
+#copyright {
+    padding-top: 3rem;
+}
 
 
 
@@ -391,6 +454,17 @@ img {
 
     body {
         font-size: 16px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    header,
+    main,
+    footer {
+        max-width: 1200px;
+        padding: 0 8.5%;
     }
 
     /* === TABLET : LAYOUT === */
@@ -444,6 +518,16 @@ img {
     
     .footer-text {
         line-height: 1.5rem
+    }
+
+    /* TABLET : HOMEPAGE */
+
+    .service {
+        padding: 5%;
+    }
+
+    .service i {
+        font-size: 4.5rem;
     }
 
 }
@@ -503,6 +587,22 @@ img {
     .footer-text {
         font-size: 1rem;
         line-height: 1.333rem;
+    }
+
+    /* DESKTOP : HOMEPAGE */
+
+    .service {
+        padding: 2%;
+    }
+
+    .service i {
+        font-size: 4rem;
+    }
+
+    /* DESKTOP : FOOTER */
+
+    footer i {
+        font-size: 1rem;
     }
 }
 
