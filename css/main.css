@@ -108,7 +108,7 @@ TABLE OF CONTENTS
 I. GLOBAL STYLES
 IA. BASE STYLES
 IB. LAYOUT
-IB1. CONTENT MARGINS
+IB1. CONTENT MARGINS/PADDING
 IB2. PARENT CONTAINERS
 IB3. CHILD ELEMENTS
 IB4. FOOTER LAYOUT
@@ -127,6 +127,10 @@ GLOBAL STYLES
     box-sizing: border-box;
 }
 body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     background-color: #202322;
     color: #e2e3ed;
     font-family: 'Open Sans', sans-serif;
@@ -137,10 +141,11 @@ body {
 
 /* === IB. LAYOUT === */
 
-/* = IB2. PARENT CONTAINERS = */
+/* = IB2. CONTENT MARGINS/PADDING = */
 
 header,
-main,
+section,
+aside,
 footer {
     max-width: 768px;
     padding: 0 5%;
@@ -193,25 +198,25 @@ nav ul {
 .heading-lg {
     font-family: 'Poppins', sans-serif;
     font-size: 2.25rem;
-    margin: 1rem 0;
+    margin: 0;
 }
 
 .heading-md {
     font-family: 'Poppins', sans-serif;
     font-size: 1.875rem;
-    margin: 1rem 0;
+    margin: 0;
 }
 
 .heading-sm {
     font-family: 'Poppins', sans-serif;
     font-size: 1.125rem;
-    margin: 1rem 0;
+    margin: 0;
 }
 
 p {
     font-size: 0.875rem;
     line-height: 1.125rem;
-    margin: 1rem 0;
+    margin: 0;
 }
 
 a,
@@ -233,7 +238,7 @@ nav li a {
     text-transform: uppercase;
     text-align: center;
     font-size: 1.125rem;
-    margin: 1rem 0;
+    margin: 0;
 }
 
 /* = IC3. PAGE FONTS = */
@@ -249,7 +254,7 @@ nav li a {
 #contact address {
     font-size: 0.875rem;
     font-style: normal;
-    margin: 1rem 0;
+    margin: 0;
 }
 
 /* IC3c. FAQ */
@@ -274,14 +279,14 @@ dd {
     font-family: 'Poppins', sans-serif;
     text-align: center;
     font-size: 1.125rem;
-    margin: 1rem 0;
+    margin: 0;
 }
 
 .footer-text {
     text-align: center;
     font-size: 0.875rem;
     font-style: normal;
-    margin: 1rem 0;
+    margin: 0;
 }
 
 /* === ID. MISC ELEMENTS === */
@@ -304,9 +309,26 @@ img {
 
 /* IB1a. HERO IMAGE */
 
+#hero-img {
+    background: #527158 url(../img/jake-melara-30679-unsplash.jpg) no-repeat center;
+    background-size: cover;
+    height: 50vh;
+
+}
+
 /* IB1b. CALL-TO-ACTION */
 
+
+#call-to-action {
+    background-color: #527158;
+}
+
 /* IB1c. SERVICES */
+
+#services {
+    background: #29423a url(../img/rawpixel-800820-unsplash1.jpg) no-repeat center center;
+    background-size: cover;
+}
 
 .service {
     padding: 10%;
@@ -319,17 +341,33 @@ img {
 
 /* IB1d. PREVIOUS RETREATS */
 
+#previous-retreats {
+    background-color: #29423a;
+}
+
 /* = IB2. ABOUT = */
 
 /* IB2a. MISSION */
+
+#mission {
+    background-color: #527158;
+}
 
 /* IB2b. MAP */
 
 /* IB2c. CONTACT*/
 
+#contact {
+    background-color: #29423a;
+}
+
 /* = IB3. FAQ = */
 
 /* IB3a. FAQ */
+
+#faq-section {
+    background-color: #527158;
+}
 
 /* === IC. FOOTER === */
 
@@ -454,14 +492,11 @@ img {
 
     body {
         font-size: 16px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
     }
 
     header,
-    main,
+    section,
+    aside,
     footer {
         max-width: 1200px;
         padding: 0 8.5%;
@@ -473,12 +508,12 @@ img {
     .flex-col-row,
     footer {
         flex-flow: row wrap;
-        justify-content: space-evenly;
+        justify-content: space-between;
     }
 
     .full-2col,
     .service {
-        flex-basis: 40%;
+        flex-basis: 48%;
     }
 
     nav ul {
