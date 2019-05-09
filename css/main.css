@@ -148,7 +148,18 @@ section,
 aside,
 footer {
     max-width: 768px;
-    padding: 0 5%;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.flex-col-row {
+    padding-top: 30px;
+    padding-bottom: 54px;
+}
+
+footer,
+footer #copyright {
+    padding-top: 30px;
 }
 
 /* = IB2. PARENT CONTAINERS = */
@@ -160,6 +171,10 @@ footer {
     flex-flow: column nowrap;
     justify-content: center;
     width: 100%;
+}
+
+header {
+    align-items: center;
 }
 
 /* = IB3. CHILD ELEMENTS = */
@@ -199,24 +214,25 @@ nav ul {
     font-family: 'Poppins', sans-serif;
     font-size: 2.25rem;
     margin: 0;
+    padding-top: 3.5rem;
 }
 
-.heading-md {
+.heading-md,
+.heading-md-lg {
     font-family: 'Poppins', sans-serif;
     font-size: 1.875rem;
-    margin: 0;
+    margin: 1.5rem 0;
 }
 
 .heading-sm {
     font-family: 'Poppins', sans-serif;
     font-size: 1.125rem;
-    margin: 0;
+    margin: 1.125rem 0;
 }
 
 p {
     font-size: 0.875rem;
     line-height: 1.125rem;
-    margin: 0;
 }
 
 a,
@@ -247,6 +263,12 @@ nav li a {
 
 .service {
     text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.service p {
+    width: 70%;
 }
 
 /* IC3b. ABOUT */
@@ -254,10 +276,14 @@ nav li a {
 #contact address {
     font-size: 0.875rem;
     font-style: normal;
-    margin: 0;
+/*    margin: 0; */
 }
 
 /* IC3c. FAQ */
+
+#faqs {
+    padding: 0;
+}
 
 dt {
     font-family: 'Poppins', sans-serif;
@@ -279,14 +305,14 @@ dd {
     font-family: 'Poppins', sans-serif;
     text-align: center;
     font-size: 1.125rem;
-    margin: 0;
+    margin: 1.5rem 0;
 }
 
 .footer-text {
     text-align: center;
     font-size: 0.875rem;
     font-style: normal;
-    margin: 0;
+    margin: 0.875rem 0;
 }
 
 /* === ID. MISC ELEMENTS === */
@@ -303,6 +329,13 @@ img {
 
 /* === IA. HEADER === */
 
+/* = IA1. LOGO = */
+
+#logo-img {
+    max-width: 180px;
+    margin: 1rem;
+}
+
 /* === IB. PAGES === */
 
 /* = IB1. HOME = */
@@ -310,10 +343,9 @@ img {
 /* IB1a. HERO IMAGE */
 
 #hero-img {
-    background: #527158 url(../img/jake-melara-30679-unsplash.jpg) no-repeat center;
+    background: #527158 url(../img/jake-melara-30679-unsplash.png) no-repeat center;
     background-size: cover;
-    height: 50vh;
-
+    height: 500px;
 }
 
 /* IB1b. CALL-TO-ACTION */
@@ -323,10 +355,32 @@ img {
     background-color: #527158;
 }
 
+input {
+    border: none;
+    padding: 1rem;
+    margin: .5rem 0;
+}
+
+input[type="email"] {
+    background-color: #e2e3ed;
+    font-family: 'Open Sans', sans-serif;
+    font-style: italic;
+    font-size: 0.875rem;
+    color: #9d9ea4;
+}
+
+input[type="submit"] {
+    background-color: #2a423a;
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase;
+    font-size: 1.125rem;
+    color: #e2e3ed;
+}
+
 /* IB1c. SERVICES */
 
 #services {
-    background: #29423a url(../img/rawpixel-800820-unsplash1.jpg) no-repeat center center;
+    background: #29423a url(../img/rawpixel-800820-unsplash1.png) no-repeat center center;
     background-size: cover;
 }
 
@@ -359,7 +413,7 @@ img {
     position: relative;
     width: 100%;
     height: 0;
-    padding-bottom: 80%;
+    padding-bottom: 125%;
     overflow: hidden;
 }
 
@@ -383,6 +437,7 @@ img {
 
 #faq-section {
     background-color: #527158;
+    padding: 54px 5% 54px 5%;
 }
 
 /* === IC. FOOTER === */
@@ -518,6 +573,16 @@ img {
         padding: 0 8.5%;
     }
 
+    .flex-col-row {
+        padding-top: 80px;
+        padding-bottom: 104px;
+    }
+    
+    footer,
+    footer #copyright {
+        padding-top: 80px;
+    }
+
     /* === TABLET : LAYOUT === */
 
     header,
@@ -544,9 +609,11 @@ img {
 
     .heading-lg {
         font-size: 3rem;
+        padding-top: 6.5rem;
     }
 
-    .heading-md {
+    .heading-md,
+    .heading-md-lg {
         font-size: 2.25rem;
     }
 
@@ -571,7 +638,22 @@ img {
         line-height: 1.5rem
     }
 
+    /* TABLET : COMPONENT STYLES */
+
+    /* TABLET : HEADER */
+    #logo-img {
+        max-width: 174px;
+    }
+
     /* TABLET : HOMEPAGE */
+
+    #hero-img {
+        height: 600px;
+    }
+
+    #call-to-action {
+        padding: 54px 5%;
+    }
 
     .service {
         padding: 5%;
@@ -581,6 +663,22 @@ img {
         font-size: 4.5rem;
     }
 
+    #prev-retreat-text .heading-sm,
+    #prev-retreat-text p {
+        margin-top: 0;
+    }
+
+    /* TABLET : ABOUT PAGE */
+
+    #map {
+        padding-bottom: 46%;
+    }
+
+    /* TABLET : FAQ */
+
+    #faq-section {
+        padding: 80px 5% 92px 5%;
+    }
 }
 
 @media only screen and (min-width: 1200px) {
@@ -596,7 +694,8 @@ img {
     aside,
     footer {
         max-width: none;
-        padding: 0 10%;
+        padding-left: 10%;
+        padding-right: 10%;
     }
 
     /* === DESKTOP : LAYOUT === */
@@ -610,6 +709,11 @@ img {
 
     .heading-lg {
         font-size: 3.333rem;
+        padding-top: 3rem;
+    }
+
+    .heading-md-lg {
+        font-size: 2.667rem;
     }
 
     .heading-md {
@@ -648,7 +752,26 @@ img {
         line-height: 1.333rem;
     }
 
+    /* DESKTOP : COMPONENT STYLES */
+
+    /* DESKTOP : HEADER */
+    #logo-img {
+        max-width: 262px;
+    }
     /* DESKTOP : HOMEPAGE */
+
+    #hero-img .heading-lg {
+        width: 75%;
+    }
+
+    #call-to-action {
+        padding: 54px 15%;
+        justify-content: space-between;
+    }
+
+    #call-to-action div {
+        flex-basis: 40%;
+    }
 
     .service {
         padding: 2%;
@@ -656,6 +779,18 @@ img {
 
     .service i {
         font-size: 4rem;
+    }
+
+    /* DESKTOP : ABOUT PAGE */
+
+    #map {
+        padding-bottom: 38%;
+    }
+
+    /* DESKTOP : FAQ */
+
+    #faq-section {
+        padding: 80px 10% 92px 10%;
     }
 
     /* DESKTOP : FOOTER */
