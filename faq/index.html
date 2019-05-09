@@ -14,6 +14,9 @@
   <link rel="stylesheet" href="../css/normalize.css">
   <link rel="stylesheet" href="../css/main.css">
 
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Poppins:500" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
   <meta name="theme-color" content="#fafafa">
 </head>
 
@@ -25,14 +28,14 @@
 
   <!-- ***** HEADER ***** -->
   <header>
-
+    
     <!-- *** LOGO *** -->
-    <figure id="logo-img">
-      <a href="../index.html"><img src="../img/" alt="Unplugged Retreat Logo." id="logo"></a>
+    <figure id="logo-img" class="full-2col">
+      <a href="../index.html"><img src="../img/logo.png" alt="Unplugged Retreat Logo." id="logo"></a>
     </figure>
-
+    
     <!-- *** NAVBAR *** -->
-    <nav>
+    <nav class="full-2col">
       <ul>
         <li><a href="#">FAQ</a></li>
         <li><a href="../about/index.html">ABOUT</a></li>
@@ -43,42 +46,55 @@
 
   <!-- ***** MAIN SECTION: FAQ ***** -->
   <main id="faq">
-    <h1>Frequently Asked Questions</h1>
-    <dl id="faqs">
-      <dt>How do I get to the Unplugged retreat?</dt>
-      <dd>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.</dd>
-      <dt>What kind of team is right for the Unplugged retreat?</dt>
-      <dd>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.</dd>
-      <dt>What size teams can you accommodate?</dt>
-      <dd>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</dd>
-      <dt>Is there really no wifi available?</dt>
-      <dd>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.</dd>
-    </dl>
+    <section id="faq-section">
+      <h1 class="full heading-md-lg">Frequently Asked Questions</h1>
+
+      <!-- *** QUESTIONS *** -->
+      <dl id="faqs" class="flex-col-row">
+        <div class="full-2col">
+          <dt>How do I get to the Unplugged retreat?</dt>
+          <dd>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.</dd>
+        </div>
+        <div class="full-2col">
+          <dt>What kind of team is right for the Unplugged retreat?</dt>
+          <dd>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.</dd>
+        </div>
+        <div class="full-2col">
+          <dt>What size teams can you accommodate?</dt>
+          <dd>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</dd>
+        </div>
+        <div class="full-2col">
+          <dt>Is there really no wifi available?</dt>
+          <dd>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.</dd>
+        </div>
+
+      </dl>
+    </section>
   </main>
 
   <!-- ***** FOOTER ***** -->
   <footer>
 
     <!-- *** CONTACT *** -->
-    <div id="contact-footer">
-      <h2>Contact</h2>
-      <address>555-555-5555<br>
+    <div id="contact-footer" class="full-2col">
+      <h2 class="footer-heading">Contact</h2>
+      <address class="footer-text">555-555-5555<br>
       hello@unplugged.com</address>
     </div>
 
     <!-- *** SOCIAL ICONS *** -->
-    <div id="social-media">
-      <h3>Social</h3>
-      <a href="https://facebook.com">Facebook</a>
-      <a href="https://twitter.com">Twitter</a>
-      <a href="https://instagram.com">Instagram</a>
+    <div id="social-media" class="full-2col flex-row">
+      <h3 class="full footer-heading">Social</h3>
+      <a href="https://facebook.com" class="social-icons"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://twitter.com" class="social-icons"><i class="fab fa-twitter"></i></a>
+      <a href="https://instagram.com" class="social-icons"><i class="fab fa-instagram"></i></a>
     </div>
 
     <!-- *** COPYRIGHT *** -->
-    <div id="copyright">
-      <small>Copyright 2019 | Unplugged</small>
+    <div id="copyright" class="full">
+      <small class=footer-text>Copyright 2019 | Unplugged</small>
     </div>
-    
+
   </footer>
 
   <script src="../js/vendor/modernizr-3.7.1.min.js"></script>
