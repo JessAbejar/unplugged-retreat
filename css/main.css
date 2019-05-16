@@ -327,7 +327,7 @@ nav ul li a {
 /* = IIIB1. HERO IMAGE === */
 
 #hero-img {
-    background: #527158 url(../img/jake-melara-30679-unsplash.png) no-repeat center;
+    background: #527158 url(../img/jake-melara-30679-unsplash.jpg) no-repeat center;
     background-size: cover;
     height: 500px;
 }
@@ -363,7 +363,7 @@ input[type="submit"] {
 /* = IIIB3. SERVICES = */
 
 #services {
-    background: #29423a url(../img/rawpixel-800820-unsplash1.png) no-repeat center center;
+    background: #29423a url(../img/rawpixel-800820-unsplash1.jpg) no-repeat center center;
     background-size: cover;
 }
 
