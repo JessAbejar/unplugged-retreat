@@ -105,27 +105,91 @@ textarea {
 /* 
 
 TABLE OF CONTENTS
-I. GLOBAL STYLES
-IA. BASE STYLES
-IB. LAYOUT
-IB1. CONTENT MARGINS/PADDING
-IB2. PARENT CONTAINERS
-IB3. CHILD ELEMENTS
-IB4. FOOTER LAYOUT
-IC. TEXT STYLES
-ID. MISC ELEMENTS
+    I. GLOBAL STYLES
+      IA. BASE STYLES
+      IB. GENERAL LAYOUT
+        IB1. PARENT COMPONENTS
+        IB2. CHILD ELEMENTS
+      IC. BASE FONTS
+      ID. GENERAL ELEMENTS
+    II. SPECIFIC COMPONENT STYLES
+      IIA. HEADER
+        IIA1. LOGO
+        IIA2. NAV
+      IIB. HOMEPAGE
+        IIB1. HERO IMAGE
+        IIB2. CALL-TO-ACTION
+        IIB3. SERVICES
+        IIB4. PREVIOUS RETREATS
+      IIC. ABOUT
+        IIC1. MISSION
+        IIC2. MAP
+        IIC3. CONTACT (ABOUT)
+      IID. FAQ
+      IIE. FOOTER
+        IIE1. FOOTER TEXT STYLES
+        IIE2. SOCIAL MEDIA ICONS
+        IIE3. COPYRIGHT
 
-MEDIA QUERIES
-GLOBAL STYLES
+    ===== MEDIA QUERIES =====
+
+    III. TABLET STYLES
+        IIIA. TABLET : GLOBAL STYLES
+          IIIA1. TABLET : GENERAL LAYOUT
+            IIIA1a. TABLET : PARENT COMPONENTS
+            IIIA1b. TABLET : CHILD ELEMENTS
+          IIIA2. TABLET :  BASE FONTS
+        IIIB. TABLET : SPECIFIC COMPONENT STYLES
+          IIIB1. TABLET : HEADER
+                IIIB1a. TABLET : LOGO
+                IIIB1b. TABLET : NAV
+          IIIB2. TABLET : HOMEPAGE
+                IIIB2a. TABLET : HERO IMAGE
+                IIIB2b. TABLET : CALL-TO-ACTION
+                IIIB2c. TABLET : SERVICES
+                IIIB2d. TABLET : PREVIOUS RETREATS
+          IIIB3. TABLET : ABOUT
+                IIIB3a. TABLET : MAP
+                IIIB3b. TABLET : CONTACT (ABOUT)
+          IIIB4. TABLET : FAQ
+          IIIB5. TABLET : FOOTER
+                IIIB5a. TABLET : FOOTER TEXT STYLES
+
+    IV. DESKTOP STYLES
+        IVA. DESKTOP : GLOBAL STYLES
+          IVA1. DESKTOP : BASE STYLES
+          IVA2. DESKTOP : GENERAL LAYOUT
+            IVA2a. DESKTOP : PARENT COMPONENTS
+            IVA2b. DESKTOP : CHILD ELEMENTS
+          IVA3. DESKTOP :  BASE FONTS
+        IVB. DESKTOP : SPECIFIC COMPONENT STYLES
+          IVB1. DESKTOP : HEADER
+                IVB1a. DESKTOP : LOGO
+          IVIB2. DESKTOP : HOMEPAGE
+                IVB2a. DESKTOP : HERO IMAGE
+                IVB2b. DESKTOP : CALL-TO-ACTION
+                IVB2c. DESKTOP : SERVICES
+          IVB3. DESKTOP : ABOUT
+                IVB3a. DESKTOP : MAP
+                IVB3b. DESKTOP : CONTACT (ABOUT)
+          IVB4. DESKTOP : FAQ
+          IVB5. DESKTOP : FOOTER
+                IVB5a. DESKTOP : FOOTER TEXT STYLES
+                IVB5b. DESKTOP : SOCIAL MEDIA ICONS
 
 */
 
 /* ===== I. GLOBAL STYLES ===== */
 
 /* === IA. BASE STYLES === */
+:root {
+    font-size: 16px;
+}
+
 * {
     box-sizing: border-box;
 }
+
 body {
     display: flex;
     flex-direction: column;
@@ -135,13 +199,21 @@ body {
     color: #e2e3ed;
     font-family: 'Open Sans', sans-serif;
     font-weight: 400;
-    font-size: 16px;
     text-align: left;
 }
 
-/* === IB. LAYOUT === */
+/* === IB. GENERAL LAYOUT === */
 
-/* = IB2. CONTENT MARGINS/PADDING = */
+/* = IB1. PARENT COMPONENTS = */
+
+header,
+.flex-col-row,
+footer {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    width: 100%;
+}
 
 header,
 section,
@@ -157,27 +229,7 @@ footer {
     padding-bottom: 54px;
 }
 
-footer,
-footer #copyright {
-    padding-top: 30px;
-}
-
-/* = IB2. PARENT CONTAINERS = */
-
-header,
-.flex-col-row,
-footer {
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    width: 100%;
-}
-
-header {
-    align-items: center;
-}
-
-/* = IB3. CHILD ELEMENTS = */
+/* = IB2. CHILD ELEMENTS = */
 
 .full,
 .full-2col,
@@ -189,26 +241,7 @@ form {
     flex-basis: 100%;
 }
 
-/* = IB4. HEADER LAYOUT = */
-
-nav ul {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-}
-
-/* = IB4. FOOTER LAYOUT = */
-
-#social-media {
-    flex-flow: row wrap;
-    justify-content: space-evenly;
-    width: 100%;
-}
-
-/* === IC. TEXT STYLES === */
-
-/* = IC1. BASE FONTS = */
+/* === IC. BASE FONTS === */
 
 .heading-lg {
     font-family: 'Poppins', sans-serif;
@@ -217,8 +250,8 @@ nav ul {
     padding-top: 3.5rem;
 }
 
-.heading-md,
-.heading-md-lg {
+.heading-md-lg,
+.heading-md {
     font-family: 'Poppins', sans-serif;
     font-size: 1.875rem;
     margin: 1.5rem 0;
@@ -243,79 +276,7 @@ a:visited {
     color: #e2e3ed
 }
 
-/* = IC2. HEADER FONTS = */
-
-nav li {
-    padding: 0 1rem;
-}
-
-nav li a {
-    font-weight: 700;
-    text-transform: uppercase;
-    text-align: center;
-    font-size: 1.125rem;
-    margin: 0;
-}
-
-/* = IC3. PAGE FONTS = */
-
-/* IC3a. HOMEPAGE */
-
-.service {
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-}
-
-.service p {
-    width: 70%;
-}
-
-/* IC3b. ABOUT */
-
-#contact address {
-    font-size: 0.875rem;
-    font-style: normal;
-/*    margin: 0; */
-}
-
-/* IC3c. FAQ */
-
-#faqs {
-    padding: 0;
-}
-
-dt {
-    font-family: 'Poppins', sans-serif;
-    font-size: 1.125rem;
-    line-height: 1.5rem;
-    margin: 1rem 0;
-}
-
-dd {
-    font-size: 0.875rem;
-    line-height: 1.125rem;
-    margin: 0;
-    padding-bottom: 2rem;
-}
-
-/* = IC4. FOOTER FONTS = */
-
-.footer-heading {
-    font-family: 'Poppins', sans-serif;
-    text-align: center;
-    font-size: 1.125rem;
-    margin: 1.5rem 0;
-}
-
-.footer-text {
-    text-align: center;
-    font-size: 0.875rem;
-    font-style: normal;
-    margin: 0.875rem 0;
-}
-
-/* === ID. MISC ELEMENTS === */
+/* === ID. GENERAL ELEMENTS === */
 
 figure {
     margin: 0;
@@ -325,22 +286,45 @@ img {
     width: 100%;
 }
 
-/* ===== II. COMPONENT STYLES ===== */
+/* ===== II. SPECIFIC COMPONENT STYLES ===== */
 
-/* === IA. HEADER === */
+/* === IIA. HEADER === */
 
-/* = IA1. LOGO = */
+header {
+    align-items: center;
+}
+
+/* = IIA1. LOGO = */
 
 #logo-img {
     max-width: 180px;
     margin: 1rem;
 }
 
-/* === IB. PAGES === */
+/* = IIA2. NAV = */
 
-/* = IB1. HOME = */
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
 
-/* IB1a. HERO IMAGE */
+nav ul li {
+    padding: 0 1rem;
+}
+
+nav ul li a {
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 1.125rem;
+    margin: 0;
+}
+
+/* === IIB. HOMEPAGE === */
+
+/* = IIIB1. HERO IMAGE === */
 
 #hero-img {
     background: #527158 url(../img/jake-melara-30679-unsplash.png) no-repeat center;
@@ -348,8 +332,7 @@ img {
     height: 500px;
 }
 
-/* IB1b. CALL-TO-ACTION */
-
+/* = IIIB2. CALL-TO-ACTION = */
 
 #call-to-action {
     background-color: #527158;
@@ -377,7 +360,7 @@ input[type="submit"] {
     color: #e2e3ed;
 }
 
-/* IB1c. SERVICES */
+/* = IIIB3. SERVICES = */
 
 #services {
     background: #29423a url(../img/rawpixel-800820-unsplash1.png) no-repeat center center;
@@ -385,6 +368,9 @@ input[type="submit"] {
 }
 
 .service {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
     padding: 10%;
 }
 
@@ -393,21 +379,25 @@ input[type="submit"] {
     font-size: 3.75rem;
 }
 
-/* IB1d. PREVIOUS RETREATS */
+.service p {
+    width: 70%;
+}
+
+/* = IIIB4. PREVIOUS RETREATS = */
 
 #previous-retreats {
     background-color: #29423a;
 }
 
-/* = IB2. ABOUT = */
+/* === IIC. ABOUT === */
 
-/* IB2a. MISSION */
+/* = IIC1. MISSION = */
 
 #mission {
     background-color: #527158;
 }
 
-/* IB2b. MAP */
+/* = IIC2. MAP = */
 
 #map {
     position: relative;
@@ -425,22 +415,72 @@ input[type="submit"] {
     left: 0;
 }
 
-/* IB2c. CONTACT*/
+/* = IIC3. CONTACT (ABOUT) = */
 
 #contact {
     background-color: #29423a;
 }
 
-/* = IB3. FAQ = */
+#contact address {
+    font-size: 0.875rem;
+    font-style: normal;
+}
 
-/* IB3a. FAQ */
+/* === IID. FAQ === */
 
 #faq-section {
     background-color: #527158;
     padding: 54px 5% 54px 5%;
 }
 
-/* === IC. FOOTER === */
+#faqs {
+    padding: 0;
+}
+
+dt {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.125rem;
+    line-height: 1.5rem;
+    margin: 1rem 0;
+}
+
+dd {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+    margin: 0;
+    padding-bottom: 2rem;
+}
+
+/* === IIE. FOOTER === */
+
+footer,
+footer #copyright {
+    padding-top: 30px;
+}
+
+/* = IIE1. FOOTER TEXT STYLES = */
+
+.footer-heading {
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    font-size: 1.125rem;
+    margin: 1.5rem 0;
+}
+
+.footer-text {
+    text-align: center;
+    font-size: 0.875rem;
+    font-style: normal;
+    margin: 0.875rem 0;
+}
+
+/* = IIE2. SOCIAL MEDIA ICONS = */
+
+#social-media {
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    width: 100%;
+}
 
 .social-icons {
     width: 3rem;
@@ -458,16 +498,11 @@ input[type="submit"] {
     font-size: 1.125rem;
 }
 
+/* = IIE3. COPYRIGHT = */
+
 #copyright {
     padding-top: 3rem;
 }
-
-
-
-
-
-
-
 
 
  /* ==========================================================================
@@ -559,11 +594,13 @@ input[type="submit"] {
 
 @media only screen and (min-width: 768px) {
 
-    /* === TABLET : BASE STYLES === */
+    /* ===== III. TABLET STYLES ===== */
 
-    body {
-        font-size: 16px;
-    }
+    /* === IIIA. TABLET : GLOBAL STYLES === */
+
+    /* = IIIA1. TABLET : GENERAL LAYOUT = */
+
+    /* IIIA1a. TABLET : PARENT COMPONENTS = */
 
     header,
     section,
@@ -573,18 +610,6 @@ input[type="submit"] {
         padding: 0 8.5%;
     }
 
-    .flex-col-row {
-        padding-top: 80px;
-        padding-bottom: 104px;
-    }
-    
-    footer,
-    footer #copyright {
-        padding-top: 80px;
-    }
-
-    /* === TABLET : LAYOUT === */
-
     header,
     .flex-col-row,
     footer {
@@ -592,28 +617,27 @@ input[type="submit"] {
         justify-content: space-between;
     }
 
+    .flex-col-row {
+        padding-top: 80px;
+        padding-bottom: 104px;
+    }
+    
+    /* IIIA1b. TABLET : CHILD ELEMENTS */
+
     .full-2col,
     .service {
         flex-basis: 48%;
     }
 
-    nav ul {
-        justify-content: flex-end;
-    }
-
-    /* === TABLET : TEXT STYLES === */
-
-    nav li a {
-        font-size: 1rem;
-    }
+    /* = IIIA2. TABLET : BASE FONTS = */
 
     .heading-lg {
         font-size: 3rem;
         padding-top: 6.5rem;
     }
 
-    .heading-md,
-    .heading-md-lg {
+    .heading-md-lg,
+    .heading-md {
         font-size: 2.25rem;
     }
 
@@ -621,39 +645,45 @@ input[type="submit"] {
         font-size: 1.5rem;
     }
 
-    #contact address {
-        line-height: 1.125rem;
-    }
+    /* === IIIB. TABLET : SPECIFIC COMPONENT STYLES === */
 
-    dt {
-        font-size: 0.875rem;
-        line-height: 1.125rem;
-    }
+    /* = IIIB1. TABLET : HEADER = */
 
-    .footer-heading {
-        font-size: 1.5rem;
-    }
-    
-    .footer-text {
-        line-height: 1.5rem
-    }
+    /* IIIB1a. TABLET : LOGO */
 
-    /* TABLET : COMPONENT STYLES */
-
-    /* TABLET : HEADER */
     #logo-img {
         max-width: 174px;
     }
 
-    /* TABLET : HOMEPAGE */
+    /* IIIB1b. TABLET : NAV */
 
+    nav ul {
+        justify-content: flex-end;
+    }
+
+    nav ul li a {
+        font-size: 1rem;
+    }
+
+    /* = IIIB2. TABLET : HOMEPAGE = */
+
+    /* IIIB2a. TABLET : HERO IMAGE */
+    
     #hero-img {
         height: 600px;
     }
 
+    /* IIIB2b. TABLET : CALL-TO-ACTION */
+
     #call-to-action {
-        padding: 54px 5%;
+        padding: 54px 8.5%;
     }
+
+    #call-to-action div {
+        flex-basis: 45%;
+    }
+
+    /* IIIB2c. TABLET : SERVICES */
 
     .service {
         padding: 5%;
@@ -663,31 +693,72 @@ input[type="submit"] {
         font-size: 4.5rem;
     }
 
+    /* IIIB2d. PREVIOUS RETREATS */
+
     #prev-retreat-text .heading-sm,
     #prev-retreat-text p {
         margin-top: 0;
     }
 
-    /* TABLET : ABOUT PAGE */
+    /* = IIIB3. TABLET : ABOUT = */
+
+    /* IIIB3a. TABLET : MAP */
 
     #map {
         padding-bottom: 46%;
     }
 
-    /* TABLET : FAQ */
+    /* IIIB3b. TABLET : CONTACT (ABOUT) */
+
+    #contact address {
+        line-height: 1.125rem;
+    }
+
+    /* = IIIB4. TABLET : FAQ = */
 
     #faq-section {
         padding: 80px 5% 92px 5%;
     }
+
+    dt {
+        font-size: 0.875rem;
+        line-height: 1.125rem;
+    }
+
+    /* = IIIB5. TABLET : FOOTER =*/
+
+    footer,
+    footer #copyright {
+        padding-top: 80px;
+    }
+
+    /* IIIB5a. TABLET : FOOTER TEXT STYLES = */
+
+    .footer-heading {
+        font-size: 1.5rem;
+    }
+    
+    .footer-text {
+        line-height: 1.5rem
+    }
+
 }
 
 @media only screen and (min-width: 1200px) {
 
-    /* === DESKTOP : BASE STYLES === */
+    /* ===== IV. DESKTOP STYLES ===== */
 
-    body {
+    /* === IVA. DESKTOP : GLOBAL STYLES === */
+
+    /* = IVA1. DESKTOP : BASE STYLES = */
+
+    :root {
         font-size: 18px;
     }
+
+    /* = IVA2. DESKTOP : GENERAL LAYOUT = */
+
+    /* IVA2a. DESKTOP : PARENT COMPONENTS */
 
     header,
     section,
@@ -698,14 +769,13 @@ input[type="submit"] {
         padding-right: 10%;
     }
 
-    /* === DESKTOP : LAYOUT === */
+    /* IVA2b. DESKTOP : CHILD ELEMENTS */
 
     .service {
         flex-basis: 30%;
     }
 
-
-    /* === DESKTOP : TEXT STYLES === */
+    /* = IVA3. DESKTOP : BASE FONTS = */
 
     .heading-lg {
         font-size: 3.333rem;
@@ -729,8 +799,63 @@ input[type="submit"] {
         line-height: 1.333rem;
     }
 
+    /* === IVB. DESKTOP : SPECIFIC COMPONENT STYLES === */
+
+    /* = IVB1. DESKTOP : HEADER = */
+
+    /* IVB1a. DESKTOP : LOGO */
+
+    #logo-img {
+        max-width: 262px;
+    }
+
+    /* = IVB2. DESKTOP : HOMEPAGE = */
+
+    /* IVB2a. DESKTOP : HERO IMAGE */
+
+    #hero-img .heading-lg {
+        width: 75%;
+    }
+
+    /* IVB2b. DESKTOP : CALL-TO-ACTION */
+
+    #call-to-action {
+        padding: 54px 15%;
+        justify-content: space-between;
+    }
+
+    #call-to-action div {
+        flex-basis: 40%;
+    }
+
+    /* IVB2c. DESKTOP : SERVICES */
+
+    .service {
+        padding: 2%;
+    }
+
+    .service i {
+        font-size: 4rem;
+    }
+
+    /* = IVB3. DESKTOP : ABOUT = */ 
+
+    /* IVB3a. DESKTOP : MAP */
+
+    #map {
+        padding-bottom: 38%;
+    }
+
+    /* IVB3b. DESKTOP : CONTACT (ABOUT) */
+
     #contact address {
         font-size: 1rem;
+    }
+
+    /* = IVB4. DESKTOP : FAQ = */
+
+    #faq-section {
+        padding: 80px 10% 92px 10%;
     }
 
     dt {
@@ -743,6 +868,10 @@ input[type="submit"] {
         line-height: 1rem;
     }
 
+    /* = IVB5. DESKTOP : FOOTER = */
+
+    /* IVB5a. DESKTOP : FOOTER TEXT STYLES */
+
     .footer-heading {
         font-size: 1.667rem;
     }
@@ -752,48 +881,7 @@ input[type="submit"] {
         line-height: 1.333rem;
     }
 
-    /* DESKTOP : COMPONENT STYLES */
-
-    /* DESKTOP : HEADER */
-    #logo-img {
-        max-width: 262px;
-    }
-    /* DESKTOP : HOMEPAGE */
-
-    #hero-img .heading-lg {
-        width: 75%;
-    }
-
-    #call-to-action {
-        padding: 54px 15%;
-        justify-content: space-between;
-    }
-
-    #call-to-action div {
-        flex-basis: 40%;
-    }
-
-    .service {
-        padding: 2%;
-    }
-
-    .service i {
-        font-size: 4rem;
-    }
-
-    /* DESKTOP : ABOUT PAGE */
-
-    #map {
-        padding-bottom: 38%;
-    }
-
-    /* DESKTOP : FAQ */
-
-    #faq-section {
-        padding: 80px 10% 92px 10%;
-    }
-
-    /* DESKTOP : FOOTER */
+    /* IVB5B. DESKTOP : SOCIAL MEDIA ICONS */
 
     footer i {
         font-size: 1rem;
